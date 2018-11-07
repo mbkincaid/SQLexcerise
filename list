@@ -1,0 +1,32 @@
+SELECT * FROM customers
+SELECT Country FROM customers
+SELECT * FROM customers WHERE CustomerID LIKE 'bl%';
+SELECT * FROM orders limit 100;
+SELECT * FROM customers WHERE PostalCode = 1010;
+SELECT * FROM orders WHERE ShipRegion <> NULL;
+SELECT Country  FROM orders ORDER BY City
+INSERT INTO customers (....) VALUES(...)
+SELECT * FROM customers where PostalCode in (3012, 1010, 12209, 05023)
+DELETE FROM order_details WHERE Quantity = 1;
+SELECT MIN(Quantity)
+FROM order_details;
+SELECT MAX(Quantity)
+FROM order_details;
+SELECT AVG(Quantity)
+FROM order_details;
+SELECT AVG(quantity), MAX(quantity), MIN(quantity)
+FROM `order details` group by orderid;
+SELECT CustomerID FROM orders WHERE OrderID = 10290
+ 
+SELECT * FROM Orders
+INNER JOIN Customers on Orders.Customerid = Customers.Customerid;
+SELECT * FROM Orders
+LEFT JOIN Customers ON Orders.Customerid = customers.Customerid;
+SELECT * FROM Orders
+RIGHT JOIN Customers ON Orders.Customerid = customers.Customerid;
+
+SELECT firstname FROM employees WHERE reportsto is null;
+
+
+SELECT firstName from employees WHERE reportsto = 
+(select employeeid from employees where firstname = 'Andrew');
